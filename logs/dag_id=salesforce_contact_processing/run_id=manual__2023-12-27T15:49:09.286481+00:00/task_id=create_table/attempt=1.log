@@ -1,0 +1,32 @@
+[2023-12-27T15:49:18.095+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: salesforce_contact_processing.create_table manual__2023-12-27T15:49:09.286481+00:00 [queued]>
+[2023-12-27T15:49:18.132+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: salesforce_contact_processing.create_table manual__2023-12-27T15:49:09.286481+00:00 [queued]>
+[2023-12-27T15:49:18.133+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-27T15:49:18.134+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-12-27T15:49:18.134+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-27T15:49:18.177+0000] {taskinstance.py:1383} INFO - Executing <Task(PostgresOperator): create_table> on 2023-12-27 15:49:09.286481+00:00
+[2023-12-27T15:49:18.224+0000] {standard_task_runner.py:55} INFO - Started process 27268 to run task
+[2023-12-27T15:49:18.240+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'salesforce_contact_processing', 'create_table', 'manual__2023-12-27T15:49:09.286481+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/salesforce_contact_processing.py', '--cfg-path', '/tmp/tmpr5yp2whl']
+[2023-12-27T15:49:18.249+0000] {standard_task_runner.py:83} INFO - Job 26: Subtask create_table
+[2023-12-27T15:49:18.556+0000] {task_command.py:376} INFO - Running <TaskInstance: salesforce_contact_processing.create_table manual__2023-12-27T15:49:09.286481+00:00 [running]> on host bbee0f1e1252
+[2023-12-27T15:49:18.953+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=salesforce_contact_processing
+AIRFLOW_CTX_TASK_ID=create_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-27T15:49:09.286481+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-27T15:49:09.286481+00:00
+[2023-12-27T15:49:18.993+0000] {base.py:71} INFO - Using connection ID 'postgres' for task execution.
+[2023-12-27T15:49:19.013+0000] {sql.py:315} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS contacts (
+                name TEXT NOT NULL,
+                title TEXT NOT NULL,
+                department TEXT NOT NULL,
+                email TEXT NOT NULL,
+                gender TEXT NOT NULL
+            );
+        , parameters: None
+[2023-12-27T15:49:19.081+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=salesforce_contact_processing, task_id=create_table, execution_date=20231227T154909, start_date=20231227T154918, end_date=20231227T154919
+[2023-12-27T15:49:19.255+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-12-27T15:49:19.448+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

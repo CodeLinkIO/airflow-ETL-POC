@@ -1,0 +1,2 @@
+[2023-12-28T02:54:28.825+0000] {taskinstance.py:1159} INFO - Dependencies not met for <TaskInstance: salesforce_contact_processing.create_table __airflow_temporary_run_2023-12-28T02:54:27.328323+00:00__ [success]>, dependency 'Task Instance State' FAILED: Task is in the 'success' state.
+[2023-12-28T02:54:28.830+0000] {local_task_job.py:103} INFO - Task is not able to be run

@@ -1,0 +1,26 @@
+[2023-12-27T16:06:51.451+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T16:06:48.788360+00:00 [queued]>
+[2023-12-27T16:06:51.459+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T16:06:48.788360+00:00 [queued]>
+[2023-12-27T16:06:51.460+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-27T16:06:51.460+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-12-27T16:06:51.460+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-27T16:06:51.467+0000] {taskinstance.py:1383} INFO - Executing <Task(HttpSensor): is_api_available> on 2023-12-27 16:06:48.788360+00:00
+[2023-12-27T16:06:51.473+0000] {standard_task_runner.py:55} INFO - Started process 28175 to run task
+[2023-12-27T16:06:51.477+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'salesforce_contact_processing', 'is_api_available', 'manual__2023-12-27T16:06:48.788360+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/salesforce_contact_processing.py', '--cfg-path', '/tmp/tmpzk5foq6f']
+[2023-12-27T16:06:51.479+0000] {standard_task_runner.py:83} INFO - Job 47: Subtask is_api_available
+[2023-12-27T16:06:51.528+0000] {task_command.py:376} INFO - Running <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T16:06:48.788360+00:00 [running]> on host bbee0f1e1252
+[2023-12-27T16:06:51.569+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=salesforce_contact_processing
+AIRFLOW_CTX_TASK_ID=is_api_available
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-27T16:06:48.788360+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-27T16:06:48.788360+00:00
+[2023-12-27T16:06:51.569+0000] {http.py:120} INFO - Poking: 
+[2023-12-27T16:06:51.575+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:06:51.576+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data/
+[2023-12-27T16:06:52.741+0000] {base.py:213} INFO - Success criteria met. Exiting.
+[2023-12-27T16:06:52.765+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=salesforce_contact_processing, task_id=is_api_available, execution_date=20231227T160648, start_date=20231227T160651, end_date=20231227T160652
+[2023-12-27T16:06:52.812+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-12-27T16:06:52.839+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

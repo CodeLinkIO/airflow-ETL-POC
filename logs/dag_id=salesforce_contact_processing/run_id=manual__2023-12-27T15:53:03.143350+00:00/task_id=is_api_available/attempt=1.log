@@ -1,0 +1,276 @@
+[2023-12-27T15:53:06.175+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T15:53:03.143350+00:00 [queued]>
+[2023-12-27T15:53:06.180+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T15:53:03.143350+00:00 [queued]>
+[2023-12-27T15:53:06.180+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-27T15:53:06.180+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-12-27T15:53:06.181+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-27T15:53:06.187+0000] {taskinstance.py:1383} INFO - Executing <Task(HttpSensor): is_api_available> on 2023-12-27 15:53:03.143350+00:00
+[2023-12-27T15:53:06.190+0000] {standard_task_runner.py:55} INFO - Started process 27475 to run task
+[2023-12-27T15:53:06.193+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'salesforce_contact_processing', 'is_api_available', 'manual__2023-12-27T15:53:03.143350+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/salesforce_contact_processing.py', '--cfg-path', '/tmp/tmp52lodztm']
+[2023-12-27T15:53:06.194+0000] {standard_task_runner.py:83} INFO - Job 35: Subtask is_api_available
+[2023-12-27T15:53:06.228+0000] {task_command.py:376} INFO - Running <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T15:53:03.143350+00:00 [running]> on host bbee0f1e1252
+[2023-12-27T15:53:06.263+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=salesforce_contact_processing
+AIRFLOW_CTX_TASK_ID=is_api_available
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-27T15:53:03.143350+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-27T15:53:03.143350+00:00
+[2023-12-27T15:53:06.264+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T15:53:06.269+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T15:53:06.271+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T15:53:07.301+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T15:53:07.303+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T15:54:07.370+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T15:54:07.395+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T15:54:07.396+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T15:54:08.196+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T15:54:08.196+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T15:55:08.264+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T15:55:08.325+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T15:55:08.328+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T15:55:08.869+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T15:55:08.870+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T15:56:08.936+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T15:56:08.961+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T15:56:08.963+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T15:56:09.586+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T15:56:09.586+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T15:57:09.623+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T15:57:09.691+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T15:57:09.693+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T15:57:10.315+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T15:57:10.317+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T15:58:10.394+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T15:58:10.432+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T15:58:10.434+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T15:58:10.729+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T15:58:10.731+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T15:59:10.778+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T15:59:10.811+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T15:59:10.814+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T15:59:11.385+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T15:59:11.386+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:00:11.455+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:00:11.537+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:00:11.539+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:00:12.178+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:00:12.181+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:01:12.204+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:01:12.254+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:01:12.257+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:01:12.804+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:01:12.805+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:02:12.823+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:02:12.892+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:02:12.894+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:02:13.513+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:02:13.515+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:03:13.582+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:03:13.637+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:03:13.645+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:03:13.974+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:03:13.975+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:04:14.042+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:04:14.095+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:04:14.097+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:04:14.586+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:04:14.586+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:05:14.657+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:05:14.752+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:05:14.754+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:05:15.014+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:05:15.015+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:06:15.067+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:06:15.104+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:06:15.111+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:06:15.371+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:06:15.372+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:07:15.438+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:07:15.466+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:07:15.469+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:07:15.791+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:07:15.791+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:08:15.843+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:08:15.920+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:08:15.924+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:08:16.451+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:08:16.451+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:09:16.517+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:09:16.557+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:09:16.563+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:09:16.860+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:09:16.860+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:10:16.925+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:10:16.969+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:10:16.971+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:10:17.245+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:10:17.246+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:11:17.329+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:11:17.588+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:11:17.598+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:11:18.348+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:11:18.385+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:12:18.554+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:12:18.576+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:12:18.577+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:12:18.885+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:12:18.885+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:13:18.921+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:13:18.978+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:13:18.981+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:13:19.249+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:13:19.253+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:14:19.328+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:14:19.352+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:14:19.354+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:14:19.857+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:14:19.857+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:15:19.927+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:15:19.975+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:15:19.979+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:15:20.248+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:15:20.249+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:16:20.291+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:16:20.341+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:16:20.344+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:16:20.872+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:16:20.873+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:17:20.937+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:17:20.972+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:17:20.974+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:17:21.557+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:17:21.558+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:18:21.572+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:18:21.613+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:18:21.615+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:18:22.113+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:18:22.114+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:19:22.162+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:19:22.185+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:19:22.188+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:19:22.725+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:19:22.726+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:20:22.795+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:20:22.858+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:20:22.861+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:20:23.153+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:20:23.158+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:21:23.226+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:21:23.250+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:21:23.253+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:21:23.694+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:21:23.694+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:22:23.717+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:22:23.763+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:22:23.766+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:22:24.025+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:22:24.026+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:23:24.039+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:23:24.084+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:23:24.087+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:23:24.328+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:23:24.329+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:24:24.361+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:24:24.412+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:24:24.414+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:24:24.662+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:24:24.664+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:25:24.681+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:25:24.720+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:25:24.722+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:25:25.224+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:25:25.225+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:26:25.291+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:26:25.347+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:26:25.352+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:26:25.647+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:26:25.647+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:27:25.705+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:27:25.762+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:27:25.764+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:27:26.041+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:27:26.042+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:28:26.127+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:28:26.232+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:28:26.247+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:28:26.522+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:28:26.522+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:29:26.578+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:29:26.600+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:29:26.618+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:29:27.101+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:29:27.102+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:30:27.154+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:30:27.297+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:30:27.304+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:30:27.587+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:30:27.588+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:31:27.653+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:31:27.687+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:31:27.690+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:31:27.978+0000] {http.py:161} ERROR - HTTP error: Not Found
+[2023-12-27T16:31:27.978+0000] {http.py:162} ERROR - [{"errorCode":"NOT_FOUND","message":"The requested resource does not exist"}]
+[2023-12-27T16:45:04.822+0000] {http.py:120} INFO - Poking: /
+[2023-12-27T16:45:04.898+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T16:45:04.901+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data//
+[2023-12-27T16:45:12.931+0000] {http.py:206} WARNING - HTTPSConnectionPool(host='codelink-dev-ed.develop.my.salesforce.com', port=443): Max retries exceeded with url: /services/data// (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff78c5dfd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')) Tenacity will retry to execute the operation
+[2023-12-27T16:45:12.985+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0xffff78c5dfd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 499, in send
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='codelink-dev-ed.develop.my.salesforce.com', port=443): Max retries exceeded with url: /services/data// (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff78c5dfd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 189, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/sensors/http.py", line 126, in poke
+    extra_options=self.extra_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 149, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 207, in run_and_check
+    raise ex
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 199, in run_and_check
+    response = session.send(prepped_request, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='codelink-dev-ed.develop.my.salesforce.com', port=443): Max retries exceeded with url: /services/data// (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff78c5dfd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+[2023-12-27T16:45:13.204+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=salesforce_contact_processing, task_id=is_api_available, execution_date=20231227T155303, start_date=20231227T155306, end_date=20231227T164513
+[2023-12-27T16:45:13.387+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 35 for task is_api_available (HTTPSConnectionPool(host='codelink-dev-ed.develop.my.salesforce.com', port=443): Max retries exceeded with url: /services/data// (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff78c5dfd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')); 27475)
+[2023-12-27T16:45:13.548+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-12-27T16:45:13.785+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

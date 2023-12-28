@@ -1,0 +1,52 @@
+[2023-12-27T15:52:30.172+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T15:52:27.615943+00:00 [queued]>
+[2023-12-27T15:52:30.177+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T15:52:27.615943+00:00 [queued]>
+[2023-12-27T15:52:30.177+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-27T15:52:30.177+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-12-27T15:52:30.177+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-27T15:52:30.183+0000] {taskinstance.py:1383} INFO - Executing <Task(HttpSensor): is_api_available> on 2023-12-27 15:52:27.615943+00:00
+[2023-12-27T15:52:30.187+0000] {standard_task_runner.py:55} INFO - Started process 27442 to run task
+[2023-12-27T15:52:30.189+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'salesforce_contact_processing', 'is_api_available', 'manual__2023-12-27T15:52:27.615943+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/salesforce_contact_processing.py', '--cfg-path', '/tmp/tmpn2eul9t9']
+[2023-12-27T15:52:30.191+0000] {standard_task_runner.py:83} INFO - Job 33: Subtask is_api_available
+[2023-12-27T15:52:30.224+0000] {task_command.py:376} INFO - Running <TaskInstance: salesforce_contact_processing.is_api_available manual__2023-12-27T15:52:27.615943+00:00 [running]> on host bbee0f1e1252
+[2023-12-27T15:52:30.259+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=salesforce_contact_processing
+AIRFLOW_CTX_TASK_ID=is_api_available
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-27T15:52:27.615943+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-27T15:52:27.615943+00:00
+[2023-12-27T15:52:30.259+0000] {http.py:120} INFO - Poking: v59.0/
+[2023-12-27T15:52:30.265+0000] {base.py:71} INFO - Using connection ID 'salesforce' for task execution.
+[2023-12-27T15:52:30.267+0000] {http.py:148} INFO - Sending 'GET' to url: https://codelink-dev-ed.develop.my.salesforce.com/services/data/v59.0/
+[2023-12-27T15:52:30.604+0000] {http.py:161} ERROR - HTTP error: Unauthorized
+[2023-12-27T15:52:30.604+0000] {http.py:162} ERROR - [{"message":"INVALID_AUTH_HEADER","errorCode":"INVALID_AUTH_HEADER"}]
+[2023-12-27T15:52:30.614+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 159, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://codelink-dev-ed.develop.my.salesforce.com/services/data/v59.0/
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 189, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/sensors/http.py", line 135, in poke
+    raise exc
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/sensors/http.py", line 126, in poke
+    extra_options=self.extra_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 149, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 202, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 163, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 401:Unauthorized
+[2023-12-27T15:52:30.618+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=salesforce_contact_processing, task_id=is_api_available, execution_date=20231227T155227, start_date=20231227T155230, end_date=20231227T155230
+[2023-12-27T15:52:30.627+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 33 for task is_api_available (401:Unauthorized; 27442)
+[2023-12-27T15:52:30.668+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-12-27T15:52:30.682+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

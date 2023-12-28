@@ -1,0 +1,58 @@
+[2023-12-26T07:47:33.345+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: potential_customers_process.extract_and_filter_customer __airflow_temporary_run_2023-12-26T07:47:26.769021+00:00__ [queued]>
+[2023-12-26T07:47:33.352+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: potential_customers_process.extract_and_filter_customer __airflow_temporary_run_2023-12-26T07:47:26.769021+00:00__ [queued]>
+[2023-12-26T07:47:33.352+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-26T07:47:33.352+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-12-26T07:47:33.352+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-26T07:47:33.363+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): extract_and_filter_customer> on 2022-01-01 00:00:00+00:00
+[2023-12-26T07:47:33.381+0000] {standard_task_runner.py:55} INFO - Started process 33721 to run task
+[2023-12-26T07:47:33.386+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'potential_customers_process', 'extract_and_filter_customer', '__***_temporary_run_2023-12-26T07:47:26.769021+00:00__', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/potential_customers_process.py', '--cfg-path', '/tmp/tmpvc6zsdr5']
+[2023-12-26T07:47:33.388+0000] {standard_task_runner.py:83} INFO - Job 95: Subtask extract_and_filter_customer
+[2023-12-26T07:47:33.444+0000] {task_command.py:376} INFO - Running <TaskInstance: potential_customers_process.extract_and_filter_customer __airflow_temporary_run_2023-12-26T07:47:26.769021+00:00__ [running]> on host 2d20203c1be8
+[2023-12-26T07:47:33.487+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=potential_customers_process
+AIRFLOW_CTX_TASK_ID=extract_and_filter_customer
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=__***_temporary_run_2023-12-26T07:47:26.769021+00:00__
+[2023-12-26T07:47:33.497+0000] {logging_mixin.py:120} INFO - =====================
+[2023-12-26T07:47:33.498+0000] {logging_mixin.py:120} INFO - 0               int64
+First Name     object
+Last Name      object
+Gender         object
+Country        object
+Age           float64
+Last login     object
+Id              int64
+dtype: object
+[2023-12-26T07:47:33.507+0000] {logging_mixin.py:120} INFO -    0 First Name  Last Name  Gender        Country   Age  Last login    Id
+0  1      Dulce      Abril  Female  United States  32.0  15/10/2022  1562
+1  2       Mara  Hashimoto  Female  Great Britain  25.0  16/08/2020  1582
+2  3     Philip       Gent    Male         France  36.0  21/05/2023  2587
+3  4   Kathleen     Hanner  Female  United States  25.0  15/10/2023  3549
+4  5    Nereida    Magwood  Female  United States  58.0  16/08/2016  2468
+5  6     Gaston      Brumm    Male  United States  24.0  21/05/2019  2554
+7  8    Earlean     Melgar  Female  United States  27.0  16/08/2021  2456
+[2023-12-26T07:47:33.511+0000] {postgres.py:129} INFO - Running copy expert: COPY users FROM stdin WITH DELIMITER as ',', filename: /tmp/filtered_customer.csv
+[2023-12-26T07:47:33.516+0000] {base.py:71} INFO - Using connection ID 'postgres' for task execution.
+[2023-12-26T07:47:33.519+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/potential_customers_process.py", line 45, in _extract_and_filter_customer
+    filename="/tmp/filtered_customer.csv",
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 137, in copy_expert
+    cur.copy_expert(sql, file)
+psycopg2.errors.BadCopyFileFormat: extra data after last expected column
+CONTEXT:  COPY users, line 1: "0,First Name,Last Name,Gender,Country,Age,Last login,Id"
+
+[2023-12-26T07:47:33.526+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=potential_customers_process, task_id=extract_and_filter_customer, execution_date=20220101T000000, start_date=20231226T074733, end_date=20231226T074733
+[2023-12-26T07:47:33.531+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 95 for task extract_and_filter_customer (extra data after last expected column
+CONTEXT:  COPY users, line 1: "0,First Name,Last Name,Gender,Country,Age,Last login,Id"
+; 33721)
+[2023-12-26T07:47:33.561+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-12-26T07:47:33.572+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
