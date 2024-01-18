@@ -61,8 +61,12 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
-    SALESFORCE_AUTH_TOKEN: ${SALESFORCE_AUTH_TOKEN}
     SALESFORCE_INSTANCE_URL: ${SALESFORCE_INSTANCE_URL}
+    SALESFORCE_CONSUMER_KEY: ${SALESFORCE_CONSUMER_KEY}
+    SALESFORCE_CONSUMER_SECRET: ${SALESFORCE_CONSUMER_SECRET}
+    SALESFORCE_USER_NAME: ${SALESFORCE_USER_NAME}
+    SALESFORCE_PASSWORD: ${SALESFORCE_PASSWORD}
+    SALESFORCE_SECURITY_TOKEN: ${SALESFORCE_SECURITY_TOKEN}
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
@@ -76,6 +80,22 @@ x-airflow-common:
       condition: service_healthy
 
 services:
+  mongo:
+      image: mongo
+      restart: always
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: example
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
   postgres:
     image: postgres:13
     environment:
